@@ -13,7 +13,7 @@ export class ExploreContainerComponent {
   constructor(private router: Router) {}  
 
   navigateToPage1(id: string){
-    this.router.navigate(['tabs/tab1/page1/'],{ queryParams: { id: id } });  
+    this.router.navigate([`tabs/tab1/page1/${id}`]);  
   }
 
 }

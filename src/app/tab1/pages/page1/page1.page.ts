@@ -21,10 +21,10 @@ export class Page1Page implements OnInit {
 
   getCharacterData() {
     this.isLoading = true
-    this.id = '1011334';
+    this.id = this.route.snapshot.paramMap.get('id')??'';
     this.charactersService.getCharacterById(this.id).subscribe(data => {
       this.character = data
-      console.log(data)
+      console.log(this.id)
       this.isLoading = false
     })
   }
