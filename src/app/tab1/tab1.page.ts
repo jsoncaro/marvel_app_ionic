@@ -21,7 +21,7 @@ export class Tab1Page implements OnInit {
   getAllCharacters() {
     this.isLoading = true
     this.charactersList = []
-    this.charactersService.getAllCustomers(this.search).subscribe(data => {
+    this.charactersService.getAllCharacter(this.search).subscribe(data => {
       this.charactersList = data
       this.isLoading = false
     })

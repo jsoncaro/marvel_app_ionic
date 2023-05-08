@@ -27,7 +27,7 @@ export class EventsService {
           const results: any[] = res.data.results
           let items: Item[] = []
           results.map(result => {
-            items.push({ title: result.name, text: result.description, image: result.thumbnail.path, extension: `.${result.thumbnail.extension}`, })
+            items.push({ title: result.name, text: result.description, image: result.thumbnail.path, extension: `.${result.thumbnail.extension}`,id: result.id})
           })
           return items;
         }),

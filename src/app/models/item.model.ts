@@ -3,4 +3,5 @@ export interface Item {
     text: string;
     image: string;
     extension: string;
+    id: number;
 }

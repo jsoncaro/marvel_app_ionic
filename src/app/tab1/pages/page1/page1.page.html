@@ -1,0 +1,15 @@
+<ng-template [ngIf]="character">
+  <ion-row>
+    <ion-col sizeLg="12" sizeMd="12" sizeXs="12">
+      <div class="img-wrapper" [style.background-image]="'url('+character.image+character.extension+')'">
+      </div>
+      <div class="item-name">{{character.title}}</div>
+    </ion-col>
+  </ion-row>
+</ng-template>
+<ng-template [ngIf]="isLoading">
+  <div class="spin">
+    <ion-spinner color="primary" name="crescent"></ion-spinner>
+    <p>Loading...</p>
+  </div>
+</ng-template>

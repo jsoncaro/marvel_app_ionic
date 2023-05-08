@@ -1,7 +1,7 @@
 <ng-template [ngIf]="items.length>0 && !isLoading">
   <ion-grid>
     <ion-row>
-      <ion-col sizeLg="4" sizeMd="4" sizeXs="6" *ngFor="let item of items">
+      <ion-col (click)="navigateToPage1(item.id.toString())" sizeLg="4" sizeMd="4" sizeXs="6" *ngFor="let item of items">
         <div class="img-wrapper" [style.background-image]="'url('+item.image+item.extension+')'">
         </div>
         <div class="item-name">{{item.title}}</div>
