@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Characters
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar placeholder="Search characters" [debounce]="1000" animated (ionInput)="searchItem($event)">
+    </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Characters</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-explore-container [items]="charactersList" [isLoading]="isLoading"></app-explore-container>
+</ion-content>

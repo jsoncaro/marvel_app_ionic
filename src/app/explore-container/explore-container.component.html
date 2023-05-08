@@ -1,0 +1,23 @@
+<ng-template [ngIf]="items.length>0 && !isLoading">
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeLg="4" sizeMd="4" sizeXs="6" *ngFor="let item of items">
+        <div class="img-wrapper" [style.background-image]="'url('+item.image+item.extension+')'">
+        </div>
+        <div class="item-name">{{item.title}}</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ng-template>
+<ng-template [ngIf]="isLoading">
+  <div class="spin">
+    <ion-spinner color="primary" name="crescent"></ion-spinner>
+    <p>Loading...</p>
+  </div>
+</ng-template>
+<ng-template [ngIf]="items.length==0 && !isLoading">
+  <div class="spin">
+    <ion-icon class="empty-icon" color="primary" aria-hidden="true" name="sad-outline"></ion-icon>
+    <p>No results found!</p>
+  </div>
+</ng-template>
